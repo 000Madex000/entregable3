@@ -23,9 +23,10 @@ const Character = () => {
         axios.get(`https://rickandmortyapi.com/api/location/${combineId}`)
             .then(res => setLocation(res.data))
     }, [])
+   
+  
 
-
-    // console.log(location.residents.length)
+    console.log(location.residents)
     return (
         <div className='box_origin'>
             <div className='container_character'>
@@ -45,7 +46,7 @@ const Character = () => {
                 <div className='box_parrafos'>
                     <p className='letra'>Type : {location.type}</p>
                     <p className='letra'>Dimension : {location.dimension}</p>
-                    <p className='letra'>Residents : {location.residents.length}</p>
+                    <p className='letra'>Residents : {location.residents?.length} </p>
                    
                 </div>
                 <div className='box_input'>
@@ -54,6 +55,8 @@ const Character = () => {
                 </div>
                 
             </div>
+             
+   
         </div>
 
     );
