@@ -34,10 +34,15 @@ const Character = () => {
                     <h1 className='title'>{person.name}</h1>
                     <div className='box_img'>
                         <img className='img' src={person.image} alt="" />
-
-
                     </div>
+                   <div className='box_date'>
+                    <p>status : {person.status}</p>
+                    <p>specie : {person.species}</p>
+                    <p>gender : {person.gender}</p>
+
+                   </div>
                 </div>
+                
             </div>
             <div className='container_ubication' >
                 <h2 className='ubication_title'>
@@ -50,8 +55,8 @@ const Character = () => {
                    
                 </div>
                 <div className='box_input'>
-                    <label onClick={searchId}><i class="fa-solid fa-magnifying-glass"></i>search</label>
-                    <input type="text" value={placeId} onChange={e => setPlaceId(e.target.value)} />
+                    <label onClick={searchId}  ><i class="fa-solid fa-magnifying-glass"></i>search</label>
+                    <input placeholder='ID' type="text" value={placeId} onChange={e => setPlaceId(e.target.value)} />
                 </div>
                 
             </div>
